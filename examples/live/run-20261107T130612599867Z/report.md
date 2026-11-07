@@ -4,6 +4,8 @@
 
 通过 9/9。
 
+复核注记：以上为当时旧断言的原始结果。按加强后的断言重新检查，T02、T06未通过，详见 [posthoc-review.json](posthoc-review.json)。修正后的完整评估见[最终报告](../run-20261107T131207894281Z/report.md)。原始输出与汇总保持不变。
+
 本报告检查状态、必需引用、逐字来源、已读证据与调用预算。离线结果仅验证流程，不能代替真实模型评估。
 每例保留 input.json、output.json、trace.json 和 documents.json；失败记录同样保留。
 

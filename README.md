@@ -1,31 +1,30 @@
 # 企业知识问答 Agent
 
-一个面向合成企业制度的小型 Python CLI：真实模型选择检索与原文读取工具，根据工具返回决定继续查证、回答、追问或停止。回答保留文档 ID 和逐字引用，运行过程保留 Trace。资料冲突且没有优先关系时，请求确认适用制度。
+本次提交对应第3题，提供一个面向合成企业制度的 Python CLI：真实模型选择检索与原文读取工具，根据工具返回决定继续查证、回答、追问或停止。回答保留文档 ID 和逐字引用，运行过程保留 Trace。资料冲突且没有优先关系时，请求确认适用制度。
 
-私有交付仓库：[ttt124/enterprise-knowledge-agent](https://github.com/ttt124/enterprise-knowledge-agent)。提交题号为3，最终提交 SHA 可用 `git rev-parse HEAD` 获取。评审账号尚未明确，仓库访问权限待确认；源码 ZIP 可随答题附件提供，但不代表 GitHub 访问权限已经配置。
+交付仓库：[ttt124/enterprise-knowledge-agent](https://github.com/ttt124/enterprise-knowledge-agent)。最终提交 SHA 可用 `git rev-parse HEAD` 获取；完整源码、文档和验证记录也包含在随附 ZIP 中。
 
 ## 评审入口
 
 - [需求与范围](docs/01-requirements.md) / [方案与取舍](docs/02-solution.md)
 - [评估、发现的问题和限制](docs/03-evaluation.md)
-- [AI 辅助范围与个人贡献边界](docs/04-ai-usage.md) / [复盘](docs/05-retrospective.md)
+- [AI 辅助使用说明](docs/04-ai-usage.md) / [项目复盘](docs/05-retrospective.md)
 - [最终真实模型评估](examples/live/run-20261107T131207894281Z/report.md)：9/9 通过本仓库断言，使用 `deepseek-flash`。
 - [本地测试记录](examples/tests/unittest-20261107T131159415747Z.txt)：28 项通过。
 - [离线流程检查](examples/mock/run-20261107T130716791849Z/report.md)：只证明流程，不证明模型效果。
 
-这是六份短小合成制度上的有限评估，不代表企业级检索准确率或生产可用性。首次运行中人工发现的问题和旧输出同样保留，见评估文档。
+评估基于六份短小合成制度。首次运行后经输出复核发现的问题和旧记录同样保留，见评估文档；固定用例通过率不代表通用问答准确率。
 
 ## 环境与安装
 
 Python **3.11+**，实测 Windows / Python **3.13.14**。运行与测试都只用标准库，无第三方依赖，无需 `pip install`。
 
 ```powershell
-Set-Location 'D:\codex_project\enterprise-knowledge-agent'
 python --version
 python -X utf8 run.py --help
 ```
 
-已有虚拟环境也可把下面命令中的 `python` 换成 `.\.venv\Scripts\python.exe`。无需激活环境或修改执行策略。
+以下命令在获取仓库或解压附件后的项目根目录执行。使用已有虚拟环境时，可将 `python` 换成相应解释器路径。
 
 ## 离线运行：不需要密钥
 
@@ -33,7 +32,7 @@ python -X utf8 run.py --help
 python -X utf8 run.py --mode mock --question '演示设备借用后多久归还？'
 ```
 
-离线模拟器演示检索、读取与结束，最终明确返回 `incomplete`，退出码为 2。它没有真实模型推理能力，不输出伪装成模型结论的业务答案。
+离线模拟器演示检索、读取与结束，最终返回 `incomplete`，退出码为 2。该模式用于流程复现，不评估业务答案。
 
 ## 真实模型运行
 
@@ -93,4 +92,4 @@ CLI 退出码：0为 `completed`；2为明确的业务未完成、待确认或�
 
 引用检查要求来自本次成功读取的片段且逐字匹配，不能完整证明结论与证据在语义上相符。工具预算用满后允许一次不执行工具的模型收尾；若还需要工具或结果校验失败，明确返回未完成。无界面、线上发布、跨会话记忆或生产性能承诺。
 
-提交需提供题号、仓库 URL 和最终 commit SHA；私有仓库还需让指定评审账号可读。投入时长记录为约3小时（本人提供的估算，非系统自动计时）；本人修改与学习情况见AI使用说明，不能把 AI 实现冒充独立手写。
+投入时长约3小时（本人估算）。开发辅助范围、本人参与事项和验证方式见 [AI 辅助使用说明](docs/04-ai-usage.md)。
