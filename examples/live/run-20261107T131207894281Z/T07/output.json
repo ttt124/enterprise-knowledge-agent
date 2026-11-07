@@ -1,0 +1,70 @@
+{
+  "question": "公司设备借用后应在几天内归还？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "reported_model": "deepseek-flash",
+  "answer": "无法确认公司设备借用后的归还期限：检索到一份候选制度，但尚未读取其原文，检索摘要不能作为制度依据。",
+  "citations": [],
+  "gaps": [
+    "候选文档 D001《演示设备借用与归还制度（合成示例）》未读取原文，无法核实其适用范围、归还期限及起算点",
+    "工具执行预算已耗尽，无法继续读取原文或补充检索"
+  ],
+  "status": "incomplete",
+  "reason": "仅有检索摘要、未读取候选原文，且预算耗尽无法继续取证，不能据此回答具体期限。",
+  "trace": [
+    {
+      "step": 1,
+      "event": "tool_call",
+      "model_turn": 1,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "设备借用 归还期限 天数",
+        "reason": "检索设备借用归还期限的制度依据"
+      },
+      "rationale": "检索设备借用归还期限的制度依据",
+      "observation": {
+        "ok": true,
+        "query": "设备借用 归还期限 天数",
+        "matches": [
+          {
+            "doc_id": "D001",
+            "title": "演示设备借用与归还制度（合成示例）",
+            "version_date": "2026-09-01",
+            "topic": "设备借用",
+            "snippet": "演示设备应自借用之日起7天内归还。"
+          }
+        ],
+        "total": 1,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "finish",
+        "status": "incomplete",
+        "rationale": "仅有检索摘要、未读取候选原文，且预算耗尽无法继续取证，不能据此回答具体期限。"
+      }
+    },
+    {
+      "step": 2,
+      "event": "final",
+      "origin": "model",
+      "status": "incomplete",
+      "rationale": "仅有检索摘要、未读取候选原文，且预算耗尽无法继续取证，不能据此回答具体期限。",
+      "next_action": "end"
+    }
+  ],
+  "tool_calls": 1,
+  "model_turns": 2,
+  "limits": {
+    "max_tool_calls": 1,
+    "max_model_turns": 12
+  },
+  "usage": {
+    "prompt_tokens": 1706,
+    "completion_tokens": 183,
+    "total_tokens": 1889
+  },
+  "started_at": "2026-11-07T13:12:33.650857+00:00",
+  "finished_at": "2026-11-07T13:12:35.997510+00:00",
+  "duration_seconds": 2.347
+}

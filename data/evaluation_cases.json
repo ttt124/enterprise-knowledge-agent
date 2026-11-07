@@ -1,0 +1,64 @@
+[
+  {
+    "id": "T01",
+    "name": "设备借用期限",
+    "question": "公司设备借用后应在几天内归还？",
+    "expected": {"status": ["completed"], "citation_doc_ids": ["D001"], "answer_regex": "7|七"}
+  },
+  {
+    "id": "T02",
+    "name": "差旅报销期限冲突",
+    "question": "差旅结束后到底应在15天还是30天内报销？请说明依据。",
+    "expected": {"status": ["needs_clarification"], "citation_doc_ids": ["D002", "D003"], "answer_regex": "确认|核实|澄清|冲突|不一致", "forbidden_answer_regex": "建议(?![^。！？\\n]{0,12}(确认|核实|澄清))[^。！？\\n]{0,25}(15|十五)|按较严格|先按.{0,10}(15|十五)"}
+  },
+  {
+    "id": "T03",
+    "name": "资料外问题",
+    "question": "公司的购房补贴可以领取多少钱？",
+    "expected": {"status": ["insufficient_evidence"], "no_citations": true}
+  },
+  {
+    "id": "T04",
+    "name": "设备同义口语检索",
+    "question": "我拿了台展示机，能用一周再还吗？",
+    "expected": {"status": ["completed"], "citation_doc_ids": ["D001"], "answer_regex": "7|七|一周"}
+  },
+  {
+    "id": "T05",
+    "name": "历史指代归还流程",
+    "question": "那归还时具体要怎么做？",
+    "history": [
+      {"role": "user", "content": "我在咨询公司设备借用。"},
+      {"role": "assistant", "content": "你想了解设备借用的哪一项规定？"}
+    ],
+    "expected": {"status": ["completed"], "citation_doc_ids": ["D001"], "answer_regex": "管理员|登记"}
+  },
+  {
+    "id": "T06",
+    "name": "读取工具持续失败",
+    "question": "公司设备借用后应在几天内归还？",
+    "failures": {"read_document": -1},
+    "expected": {"status": ["incomplete"], "no_citations": true, "tool_failure_observed": true, "forbidden_answer_regex": "(?<![0-9])7\\s*(个自然日|天|日)|七\\s*(个自然日|天|日)"}
+  },
+  {
+    "id": "T07",
+    "name": "仅一次工具调用预算",
+    "question": "公司设备借用后应在几天内归还？",
+    "max_tool_calls": 1,
+    "expected": {"status": ["incomplete"], "no_citations": true, "max_tool_calls": 1}
+  },
+  {
+    "id": "T08",
+    "name": "临时资料改为十天",
+    "question": "公司设备借用后应在几天内归还？",
+    "mutation": {"type": "replace", "doc_id": "D001", "old": "7天", "new": "10天"},
+    "expected": {"status": ["completed"], "citation_doc_ids": ["D001"], "answer_regex": "10|十", "forbidden_answer_regex": "(?<![0-9])7(?![0-9])|七天"}
+  },
+  {
+    "id": "T09",
+    "name": "新增设备期限冲突",
+    "question": "公司设备借用后应在几天内归还？",
+    "mutation": {"type": "append_conflict", "doc_id": "D009"},
+    "expected": {"status": ["needs_clarification"], "citation_doc_ids": ["D001", "D009"], "answer_regex": "确认|核实|澄清|冲突|不一致", "forbidden_answer_regex": "建议(?![^。！？\\n]{0,12}(确认|核实|澄清))[^。！？\\n]{0,25}(3|三)天|按较严格|先按.{0,10}(3|三)天"}
+  }
+]

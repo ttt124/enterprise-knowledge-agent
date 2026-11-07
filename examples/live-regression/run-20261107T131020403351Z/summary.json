@@ -1,0 +1,392 @@
+{
+  "mode": "live",
+  "model": "deepseek-flash",
+  "run_directory": "D:\\codex_project\\enterprise-knowledge-agent\\examples\\live-regression\\run-20261107T131020403351Z",
+  "created_at_utc": "20261107T131020403351Z",
+  "total": 4,
+  "passed": 4,
+  "results": [
+    {
+      "id": "T02",
+      "name": "差旅报销期限冲突",
+      "passed": true,
+      "status": "needs_clarification",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='needs_clarification'; allowed=['needs_clarification']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_contains_expected_fact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_omits_forbidden_claim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "cites_D002",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "cites_D003",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 7.302,
+      "business_expectations": {
+        "status": "evaluated",
+        "expected": {
+          "status": [
+            "needs_clarification"
+          ],
+          "citation_doc_ids": [
+            "D002",
+            "D003"
+          ],
+          "answer_regex": "确认|核实|澄清|冲突|不一致",
+          "forbidden_answer_regex": "建议.{0,25}(15|十五)|按较严格|先按.{0,10}(15|十五)|按.{0,8}(15|十五).{0,10}(执行|办理|提交)"
+        },
+        "reason": "Assertions applied to actual live output."
+      }
+    },
+    {
+      "id": "T06",
+      "name": "读取工具持续失败",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_omits_forbidden_claim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_failure_observed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 3.865,
+      "business_expectations": {
+        "status": "evaluated",
+        "expected": {
+          "status": [
+            "incomplete"
+          ],
+          "no_citations": true,
+          "tool_failure_observed": true,
+          "forbidden_answer_regex": "(?<![0-9])7\\s*(个自然日|天|日)|七\\s*(个自然日|天|日)"
+        },
+        "reason": "Assertions applied to actual live output."
+      }
+    },
+    {
+      "id": "T07",
+      "name": "仅一次工具调用预算",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "requested_budget_is_binding",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 2.589,
+      "business_expectations": {
+        "status": "evaluated",
+        "expected": {
+          "status": [
+            "incomplete"
+          ],
+          "no_citations": true,
+          "max_tool_calls": 1
+        },
+        "reason": "Assertions applied to actual live output."
+      }
+    },
+    {
+      "id": "T09",
+      "name": "新增设备期限冲突",
+      "passed": true,
+      "status": "needs_clarification",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='needs_clarification'; allowed=['needs_clarification']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_contains_expected_fact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_omits_forbidden_claim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "cites_D001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "cites_D009",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_4_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_4_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_4_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 5.042,
+      "business_expectations": {
+        "status": "evaluated",
+        "expected": {
+          "status": [
+            "needs_clarification"
+          ],
+          "citation_doc_ids": [
+            "D001",
+            "D009"
+          ],
+          "answer_regex": "确认|核实|澄清|冲突|不一致",
+          "forbidden_answer_regex": "建议.{0,25}(3|三)天|按较严格|先按.{0,10}(3|三)天|按.{0,8}(3|三)天.{0,10}(执行|办理|归还)"
+        },
+        "reason": "Assertions applied to actual live output."
+      }
+    }
+  ],
+  "scope": "business_and_evidence",
+  "business_expectations_evaluated": true,
+  "limitation": "Assertion-based checks, not an independent answer-quality judge. Offline flow results do not establish model or business quality."
+}

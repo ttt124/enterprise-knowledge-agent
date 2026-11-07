@@ -1,0 +1,53 @@
+{
+  "scope": "Post-hoc review against strengthened assertions; original outputs and initial summary are preserved.",
+  "results": [
+    {
+      "case": "T01",
+      "failed_checks": []
+    },
+    {
+      "case": "T02",
+      "failed_checks": [
+        {
+          "check": "answer_omits_forbidden_claim",
+          "passed": false,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case": "T03",
+      "failed_checks": []
+    },
+    {
+      "case": "T04",
+      "failed_checks": []
+    },
+    {
+      "case": "T05",
+      "failed_checks": []
+    },
+    {
+      "case": "T06",
+      "failed_checks": [
+        {
+          "check": "answer_omits_forbidden_claim",
+          "passed": false,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case": "T07",
+      "failed_checks": []
+    },
+    {
+      "case": "T08",
+      "failed_checks": []
+    },
+    {
+      "case": "T09",
+      "failed_checks": []
+    }
+  ]
+}

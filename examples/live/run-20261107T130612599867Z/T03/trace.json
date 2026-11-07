@@ -1,0 +1,81 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "购房补贴 标准 金额",
+      "reason": "检索公司购房补贴相关制度"
+    },
+    "rationale": "检索公司购房补贴相关制度",
+    "observation": {
+      "ok": true,
+      "query": "购房补贴 标准 金额",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "住房补贴 安家费 购房",
+      "reason": "换用同义词再次检索购房补贴制度"
+    },
+    "rationale": "换用同义词再次检索购房补贴制度",
+    "observation": {
+      "ok": true,
+      "query": "住房补贴 安家费 购房",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "insufficient_evidence",
+      "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项"
+    }
+  },
+  {
+    "step": 3,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "福利 补贴 员工 住房",
+      "reason": "检索员工福利类制度中的住房补贴"
+    },
+    "rationale": "检索员工福利类制度中的住房补贴",
+    "observation": {
+      "ok": true,
+      "query": "福利 补贴 员工 住房",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "insufficient_evidence",
+      "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项"
+    }
+  },
+  {
+    "step": 4,
+    "event": "final",
+    "origin": "model",
+    "status": "insufficient_evidence",
+    "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项",
+    "next_action": "end"
+  }
+]

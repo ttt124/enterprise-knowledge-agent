@@ -1,0 +1,83 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "公司设备借用后应在几天内归还？",
+      "reason": "离线模拟：展示检索工具流程"
+    },
+    "rationale": "离线模拟：展示检索工具流程",
+    "observation": {
+      "ok": true,
+      "query": "公司设备借用后应在几天内归还？",
+      "matches": [
+        {
+          "doc_id": "D001",
+          "title": "演示设备借用与归还制度（合成示例）",
+          "version_date": "2026-09-01",
+          "topic": "设备借用",
+          "snippet": "演示设备应自借用之日起7天内归还。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D001",
+      "reason": "离线模拟：读取候选原文"
+    },
+    "rationale": "离线模拟：读取候选原文",
+    "observation": {
+      "ok": true,
+      "doc_id": "D001",
+      "title": "演示设备借用与归还制度（合成示例）",
+      "version_date": "2026-09-01",
+      "topic": "设备借用",
+      "passages": [
+        {
+          "passage_id": "D001#p1",
+          "text": "员工借用演示设备，应先向资产管理员提交借用申请，登记设备名称、用途及借用日期。"
+        },
+        {
+          "passage_id": "D001#p2",
+          "text": "演示设备应自借用之日起7天内归还。"
+        },
+        {
+          "passage_id": "D001#p3",
+          "text": "归还时须将设备交给资产管理员，并完成归还登记。"
+        },
+        {
+          "passage_id": "D001#p4",
+          "text": "如需继续使用，应在到期前重新提交借用申请。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "incomplete",
+      "rationale": "offline_mock_boundary"
+    }
+  },
+  {
+    "step": 3,
+    "event": "final",
+    "origin": "model",
+    "status": "incomplete",
+    "rationale": "offline_mock_boundary",
+    "next_action": "end"
+  }
+]

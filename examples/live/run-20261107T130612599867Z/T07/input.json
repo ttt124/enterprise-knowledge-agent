@@ -1,0 +1,16 @@
+{
+  "question": "公司设备借用后应在几天内归还？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "max_tool_calls": 1,
+  "failures": {},
+  "mutation": null,
+  "expected": {
+    "status": [
+      "incomplete"
+    ],
+    "no_citations": true,
+    "max_tool_calls": 1
+  }
+}

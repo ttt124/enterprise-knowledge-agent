@@ -1,0 +1,109 @@
+{
+  "question": "公司的购房补贴可以领取多少钱？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "reported_model": "deepseek-flash",
+  "answer": "在现有制度库中未检索到任何关于“购房补贴”或“住房补贴/安家费”的制度文件，因此无法确认公司购房补贴的金额标准。",
+  "citations": [],
+  "gaps": [
+    "缺少购房补贴/住房补贴相关制度文件，无法确认补贴金额、适用对象与申领条件"
+  ],
+  "status": "insufficient_evidence",
+  "reason": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项",
+  "trace": [
+    {
+      "step": 1,
+      "event": "tool_call",
+      "model_turn": 1,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "购房补贴 标准 金额",
+        "reason": "检索公司购房补贴相关制度"
+      },
+      "rationale": "检索公司购房补贴相关制度",
+      "observation": {
+        "ok": true,
+        "query": "购房补贴 标准 金额",
+        "matches": [],
+        "total": 0,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "tools",
+        "tools": [
+          "search_documents",
+          "search_documents"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "event": "tool_call",
+      "model_turn": 2,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "住房补贴 安家费 购房",
+        "reason": "换用同义词再次检索购房补贴制度"
+      },
+      "rationale": "换用同义词再次检索购房补贴制度",
+      "observation": {
+        "ok": true,
+        "query": "住房补贴 安家费 购房",
+        "matches": [],
+        "total": 0,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "finish",
+        "status": "insufficient_evidence",
+        "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项"
+      }
+    },
+    {
+      "step": 3,
+      "event": "tool_call",
+      "model_turn": 2,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "福利 补贴 员工 住房",
+        "reason": "检索员工福利类制度中的住房补贴"
+      },
+      "rationale": "检索员工福利类制度中的住房补贴",
+      "observation": {
+        "ok": true,
+        "query": "福利 补贴 员工 住房",
+        "matches": [],
+        "total": 0,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "finish",
+        "status": "insufficient_evidence",
+        "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项"
+      }
+    },
+    {
+      "step": 4,
+      "event": "final",
+      "origin": "model",
+      "status": "insufficient_evidence",
+      "rationale": "多次改写关键词检索均无匹配结果，制度库未覆盖购房补贴事项",
+      "next_action": "end"
+    }
+  ],
+  "tool_calls": 3,
+  "model_turns": 3,
+  "limits": {
+    "max_tool_calls": 8,
+    "max_model_turns": 12
+  },
+  "usage": {
+    "prompt_tokens": 3124,
+    "completion_tokens": 289,
+    "total_tokens": 3413
+  },
+  "started_at": "2026-11-07T13:06:23.473639+00:00",
+  "finished_at": "2026-11-07T13:06:26.461701+00:00",
+  "duration_seconds": 2.988
+}

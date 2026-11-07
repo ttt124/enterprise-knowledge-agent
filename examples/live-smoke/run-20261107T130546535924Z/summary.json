@@ -1,0 +1,105 @@
+{
+  "mode": "live",
+  "model": "deepseek-flash",
+  "run_directory": "D:\\codex_project\\enterprise-knowledge-agent\\examples\\live-smoke\\run-20261107T130546535924Z",
+  "created_at_utc": "20261107T130546535924Z",
+  "total": 1,
+  "passed": 1,
+  "results": [
+    {
+      "id": "T01",
+      "name": "设备借用期限",
+      "passed": true,
+      "status": "completed",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='completed'; allowed=['completed']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "answer_contains_expected_fact",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "cites_D001",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_1_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_2_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_shape",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_verbatim",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citation_3_was_read",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 3.177
+    }
+  ],
+  "scope": "Assertion-based flow/evidence checks; mock results do not prove live model quality."
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "公司的购房补贴可以领取多少钱？",
+      "reason": "离线模拟：展示检索工具流程"
+    },
+    "rationale": "离线模拟：展示检索工具流程",
+    "observation": {
+      "ok": true,
+      "query": "公司的购房补贴可以领取多少钱？",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "incomplete",
+      "rationale": "offline_mock_boundary"
+    }
+  },
+  {
+    "step": 2,
+    "event": "final",
+    "origin": "model",
+    "status": "incomplete",
+    "rationale": "offline_mock_boundary",
+    "next_action": "end"
+  }
+]

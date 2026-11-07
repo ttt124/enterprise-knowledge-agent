@@ -1,0 +1,19 @@
+{
+  "question": "差旅结束后到底应在15天还是30天内报销？请说明依据。",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "max_tool_calls": 8,
+  "failures": {},
+  "mutation": null,
+  "expected": {
+    "status": [
+      "needs_clarification"
+    ],
+    "citation_doc_ids": [
+      "D002",
+      "D003"
+    ],
+    "answer_regex": "确认|核实|澄清|冲突|不一致"
+  }
+}

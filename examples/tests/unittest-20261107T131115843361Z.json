@@ -1,0 +1,9 @@
+{
+  "tests_run": 26,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "report": "D:\\codex_project\\enterprise-knowledge-agent\\examples\\tests\\unittest-20261107T131115843361Z.txt",
+  "model": "gpt-6.1-sol",
+  "scope": "offline regression tests; no live API calls"
+}

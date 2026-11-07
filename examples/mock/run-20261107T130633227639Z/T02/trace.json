@@ -1,0 +1,157 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "差旅结束后到底应在15天还是30天内报销？请说明依据。",
+      "reason": "离线模拟：展示检索工具流程"
+    },
+    "rationale": "离线模拟：展示检索工具流程",
+    "observation": {
+      "ok": true,
+      "query": "差旅结束后到底应在15天还是30天内报销？请说明依据。",
+      "matches": [
+        {
+          "doc_id": "D002",
+          "title": "差旅报销办理规定（合成示例甲）",
+          "version_date": "2026-06-01",
+          "topic": "差旅报销",
+          "snippet": "员工完成出差后，应自出差结束之日起30个自然日内提交差旅报销申请。"
+        },
+        {
+          "doc_id": "D003",
+          "title": "差旅费用报销须知（合成示例乙）",
+          "version_date": "2026-08-01",
+          "topic": "差旅报销",
+          "snippet": "员工完成出差后，应自出差结束之日起15个自然日内提交差旅报销申请。"
+        },
+        {
+          "doc_id": "D004",
+          "title": "差旅报销材料与办理流程（合成示例）",
+          "version_date": "2026-07-15",
+          "topic": "差旅报销",
+          "snippet": "差旅报销应附出差审批记录、有效发票及费用明细，交通费用还须提供对应行程凭证。"
+        }
+      ],
+      "total": 3,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D002",
+      "reason": "离线模拟：读取候选原文"
+    },
+    "rationale": "离线模拟：读取候选原文",
+    "observation": {
+      "ok": true,
+      "doc_id": "D002",
+      "title": "差旅报销办理规定（合成示例甲）",
+      "version_date": "2026-06-01",
+      "topic": "差旅报销",
+      "passages": [
+        {
+          "passage_id": "D002#p1",
+          "text": "员工完成出差后，应自出差结束之日起30个自然日内提交差旅报销申请。"
+        },
+        {
+          "passage_id": "D002#p2",
+          "text": "报销申请须填写出差事由、行程及费用明细。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 3,
+    "event": "tool_call",
+    "model_turn": 3,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D003",
+      "reason": "离线模拟：读取候选原文"
+    },
+    "rationale": "离线模拟：读取候选原文",
+    "observation": {
+      "ok": true,
+      "doc_id": "D003",
+      "title": "差旅费用报销须知（合成示例乙）",
+      "version_date": "2026-08-01",
+      "topic": "差旅报销",
+      "passages": [
+        {
+          "passage_id": "D003#p1",
+          "text": "员工完成出差后，应自出差结束之日起15个自然日内提交差旅报销申请。"
+        },
+        {
+          "passage_id": "D003#p2",
+          "text": "报销申请须填写出差事由、行程及费用明细。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 4,
+    "event": "tool_call",
+    "model_turn": 4,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D004",
+      "reason": "离线模拟：读取候选原文"
+    },
+    "rationale": "离线模拟：读取候选原文",
+    "observation": {
+      "ok": true,
+      "doc_id": "D004",
+      "title": "差旅报销材料与办理流程（合成示例）",
+      "version_date": "2026-07-15",
+      "topic": "差旅报销",
+      "passages": [
+        {
+          "passage_id": "D004#p1",
+          "text": "差旅报销应附出差审批记录、有效发票及费用明细，交通费用还须提供对应行程凭证。"
+        },
+        {
+          "passage_id": "D004#p2",
+          "text": "员工在内部报销系统提交材料，经直属主管审核后交财务复核。材料不齐时，财务退回申请并说明补充要求。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "incomplete",
+      "rationale": "offline_mock_boundary"
+    }
+  },
+  {
+    "step": 5,
+    "event": "final",
+    "origin": "model",
+    "status": "incomplete",
+    "rationale": "offline_mock_boundary",
+    "next_action": "end"
+  }
+]

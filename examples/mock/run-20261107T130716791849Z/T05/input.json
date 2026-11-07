@@ -1,0 +1,29 @@
+{
+  "question": "那归还时具体要怎么做？",
+  "history": [
+    {
+      "role": "user",
+      "content": "我在咨询公司设备借用。"
+    },
+    {
+      "role": "assistant",
+      "content": "你想了解设备借用的哪一项规定？"
+    }
+  ],
+  "mode": "mock",
+  "model": "offline-flow-simulator",
+  "max_tool_calls": 8,
+  "failures": {},
+  "mutation": null,
+  "expected": {
+    "status": [
+      "completed"
+    ],
+    "citation_doc_ids": [
+      "D001"
+    ],
+    "answer_regex": "管理员|登记"
+  },
+  "validation_scope": "offline_flow",
+  "business_expectations_evaluated": false
+}

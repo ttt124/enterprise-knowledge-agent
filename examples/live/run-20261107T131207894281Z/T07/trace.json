@@ -1,0 +1,41 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "设备借用 归还期限 天数",
+      "reason": "检索设备借用归还期限的制度依据"
+    },
+    "rationale": "检索设备借用归还期限的制度依据",
+    "observation": {
+      "ok": true,
+      "query": "设备借用 归还期限 天数",
+      "matches": [
+        {
+          "doc_id": "D001",
+          "title": "演示设备借用与归还制度（合成示例）",
+          "version_date": "2026-09-01",
+          "topic": "设备借用",
+          "snippet": "演示设备应自借用之日起7天内归还。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "incomplete",
+      "rationale": "仅有检索摘要、未读取候选原文，且预算耗尽无法继续取证，不能据此回答具体期限。"
+    }
+  },
+  {
+    "step": 2,
+    "event": "final",
+    "origin": "model",
+    "status": "incomplete",
+    "rationale": "仅有检索摘要、未读取候选原文，且预算耗尽无法继续取证，不能据此回答具体期限。",
+    "next_action": "end"
+  }
+]

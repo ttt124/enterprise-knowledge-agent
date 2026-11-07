@@ -1,0 +1,25 @@
+{
+  "question": "公司设备借用后应在几天内归还？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "max_tool_calls": 8,
+  "failures": {},
+  "mutation": {
+    "type": "append_conflict",
+    "doc_id": "D009"
+  },
+  "expected": {
+    "status": [
+      "needs_clarification"
+    ],
+    "citation_doc_ids": [
+      "D001",
+      "D009"
+    ],
+    "answer_regex": "确认|核实|澄清|冲突|不一致",
+    "forbidden_answer_regex": "建议(?![^。！？\\n]{0,12}(确认|核实|澄清))[^。！？\\n]{0,25}(3|三)天|按较严格|先按.{0,10}(3|三)天"
+  },
+  "validation_scope": "business_and_evidence",
+  "business_expectations_evaluated": true
+}

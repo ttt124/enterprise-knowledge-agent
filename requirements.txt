@@ -1,0 +1,2 @@
+# Python >= 3.11. No third-party runtime or test dependencies.
+# HTTP: urllib.request; tests: unittest; config: local KEY=VALUE parser.

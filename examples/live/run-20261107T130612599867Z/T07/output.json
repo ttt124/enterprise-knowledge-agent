@@ -1,0 +1,69 @@
+{
+  "question": "公司设备借用后应在几天内归还？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "reported_model": "deepseek-flash",
+  "answer": "已达到工具调用上限，尚未形成经验证的完整答案。",
+  "citations": [],
+  "gaps": [
+    "已达到工具调用上限，尚未形成经验证的完整答案。"
+  ],
+  "status": "incomplete",
+  "reason": "tool_call_limit",
+  "trace": [
+    {
+      "step": 1,
+      "event": "tool_call",
+      "model_turn": 1,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "设备借用 归还期限 天数",
+        "reason": "检索设备借用归还期限的制度规定"
+      },
+      "rationale": "检索设备借用归还期限的制度规定",
+      "observation": {
+        "ok": true,
+        "query": "设备借用 归还期限 天数",
+        "matches": [
+          {
+            "doc_id": "D001",
+            "title": "演示设备借用与归还制度（合成示例）",
+            "version_date": "2026-09-01",
+            "topic": "设备借用",
+            "snippet": "演示设备应自借用之日起7天内归还。"
+          }
+        ],
+        "total": 1,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "finish",
+        "status": "incomplete",
+        "rationale": "tool_call_limit"
+      }
+    },
+    {
+      "step": 2,
+      "event": "final",
+      "origin": "runtime",
+      "status": "incomplete",
+      "rationale": "tool_call_limit",
+      "next_action": "end"
+    }
+  ],
+  "tool_calls": 1,
+  "model_turns": 1,
+  "limits": {
+    "max_tool_calls": 1,
+    "max_model_turns": 12
+  },
+  "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 66,
+    "total_tokens": 966
+  },
+  "started_at": "2026-11-07T13:06:37.468474+00:00",
+  "finished_at": "2026-11-07T13:06:38.432163+00:00",
+  "duration_seconds": 0.964
+}

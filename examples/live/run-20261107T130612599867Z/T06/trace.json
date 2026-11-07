@@ -1,0 +1,89 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "设备借用 归还期限 天数",
+      "reason": "检索设备借用归还期限的制度规定"
+    },
+    "rationale": "检索设备借用归还期限的制度规定",
+    "observation": {
+      "ok": true,
+      "query": "设备借用 归还期限 天数",
+      "matches": [
+        {
+          "doc_id": "D001",
+          "title": "演示设备借用与归还制度（合成示例）",
+          "version_date": "2026-09-01",
+          "topic": "设备借用",
+          "snippet": "演示设备应自借用之日起7天内归还。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D001",
+      "reason": "读取该制度原文确认归还期限及适用范围"
+    },
+    "rationale": "读取该制度原文确认归还期限及适用范围",
+    "observation": {
+      "ok": false,
+      "error": {
+        "code": "tool_error",
+        "message": "read_document 暂时不可用（模拟工具故障）。"
+      }
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 3,
+    "event": "tool_call",
+    "model_turn": 3,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D001",
+      "reason": "重试读取制度原文以确认归还期限"
+    },
+    "rationale": "重试读取制度原文以确认归还期限",
+    "observation": {
+      "ok": false,
+      "error": {
+        "code": "tool_error",
+        "message": "read_document 暂时不可用（模拟工具故障）。"
+      }
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "incomplete",
+      "rationale": "检索到候选制度但原文读取工具连续故障，关键证据无法核实"
+    }
+  },
+  {
+    "step": 4,
+    "event": "final",
+    "origin": "model",
+    "status": "incomplete",
+    "rationale": "检索到候选制度但原文读取工具连续故障，关键证据无法核实",
+    "next_action": "end"
+  }
+]

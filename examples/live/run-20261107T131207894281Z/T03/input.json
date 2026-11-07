@@ -1,0 +1,17 @@
+{
+  "question": "公司的购房补贴可以领取多少钱？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "max_tool_calls": 8,
+  "failures": {},
+  "mutation": null,
+  "expected": {
+    "status": [
+      "insufficient_evidence"
+    ],
+    "no_citations": true
+  },
+  "validation_scope": "business_and_evidence",
+  "business_expectations_evaluated": true
+}

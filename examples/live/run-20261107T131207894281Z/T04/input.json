@@ -1,0 +1,20 @@
+{
+  "question": "我拿了台展示机，能用一周再还吗？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "max_tool_calls": 8,
+  "failures": {},
+  "mutation": null,
+  "expected": {
+    "status": [
+      "completed"
+    ],
+    "citation_doc_ids": [
+      "D001"
+    ],
+    "answer_regex": "7|七|一周"
+  },
+  "validation_scope": "business_and_evidence",
+  "business_expectations_evaluated": true
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "展示机 样机 借用 期限",
+      "reason": "查找展示机借用期限的相关制度"
+    },
+    "rationale": "查找展示机借用期限的相关制度",
+    "observation": {
+      "ok": true,
+      "query": "展示机 样机 借用 期限",
+      "matches": [
+        {
+          "doc_id": "D001",
+          "title": "演示设备借用与归还制度（合成示例）",
+          "version_date": "2026-09-01",
+          "topic": "设备借用",
+          "snippet": "员工借用演示设备，应先向资产管理员提交借用申请，登记设备名称、用途及借用日期。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "样机 展示机 领用 归还 流程",
+      "reason": "查找展示机领用与归还流程规定"
+    },
+    "rationale": "查找展示机领用与归还流程规定",
+    "observation": {
+      "ok": true,
+      "query": "样机 展示机 领用 归还 流程",
+      "matches": [
+        {
+          "doc_id": "D001",
+          "title": "演示设备借用与归还制度（合成示例）",
+          "version_date": "2026-09-01",
+          "topic": "设备借用",
+          "snippet": "演示设备应自借用之日起7天内归还。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 3,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D001",
+      "reason": "读取演示设备借用与归还制度原文，确认期限与起算点"
+    },
+    "rationale": "读取演示设备借用与归还制度原文，确认期限与起算点",
+    "observation": {
+      "ok": true,
+      "doc_id": "D001",
+      "title": "演示设备借用与归还制度（合成示例）",
+      "version_date": "2026-09-01",
+      "topic": "设备借用",
+      "passages": [
+        {
+          "passage_id": "D001#p1",
+          "text": "员工借用演示设备，应先向资产管理员提交借用申请，登记设备名称、用途及借用日期。"
+        },
+        {
+          "passage_id": "D001#p2",
+          "text": "演示设备应自借用之日起7天内归还。"
+        },
+        {
+          "passage_id": "D001#p3",
+          "text": "归还时须将设备交给资产管理员，并完成归还登记。"
+        },
+        {
+          "passage_id": "D001#p4",
+          "text": "如需继续使用，应在到期前重新提交借用申请。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "completed",
+      "rationale": "已读取演示设备借用与归还制度原文，明确了借用申请、7天归还期限（自借用之日起算）及续用需重新申请的规定。"
+    }
+  },
+  {
+    "step": 4,
+    "event": "final",
+    "origin": "model",
+    "status": "completed",
+    "rationale": "已读取演示设备借用与归还制度原文，明确了借用申请、7天归还期限（自借用之日起算）及续用需重新申请的规定。",
+    "next_action": "end"
+  }
+]

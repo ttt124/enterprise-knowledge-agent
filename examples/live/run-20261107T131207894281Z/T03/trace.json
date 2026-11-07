@@ -1,0 +1,128 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "购房补贴 金额 标准",
+      "reason": "查找公司购房补贴的金额规定"
+    },
+    "rationale": "查找公司购房补贴的金额规定",
+    "observation": {
+      "ok": true,
+      "query": "购房补贴 金额 标准",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "住房补贴 申请 发放",
+      "reason": "补充查找住房补贴发放标准"
+    },
+    "rationale": "补充查找住房补贴发放标准",
+    "observation": {
+      "ok": true,
+      "query": "住房补贴 申请 发放",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "search_documents",
+        "search_documents"
+      ]
+    }
+  },
+  {
+    "step": 3,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "购房 补贴 福利 员工",
+      "reason": "换用更宽泛的关键词查找购房福利制度"
+    },
+    "rationale": "换用更宽泛的关键词查找购房福利制度",
+    "observation": {
+      "ok": true,
+      "query": "购房 补贴 福利 员工",
+      "matches": [],
+      "total": 0,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "insufficient_evidence",
+      "rationale": "多轮检索均未命中购房补贴或住房补贴制度，仅有差旅报销类文档，无可用证据支持金额结论"
+    }
+  },
+  {
+    "step": 4,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "补贴 津贴 报销 标准",
+      "reason": "查找各类补贴津贴标准制度"
+    },
+    "rationale": "查找各类补贴津贴标准制度",
+    "observation": {
+      "ok": true,
+      "query": "补贴 津贴 报销 标准",
+      "matches": [
+        {
+          "doc_id": "D002",
+          "title": "差旅报销办理规定（合成示例甲）",
+          "version_date": "2026-06-01",
+          "topic": "差旅报销",
+          "snippet": "员工完成出差后，应自出差结束之日起30个自然日内提交差旅报销申请。"
+        },
+        {
+          "doc_id": "D003",
+          "title": "差旅费用报销须知（合成示例乙）",
+          "version_date": "2026-08-01",
+          "topic": "差旅报销",
+          "snippet": "员工完成出差后，应自出差结束之日起15个自然日内提交差旅报销申请。"
+        },
+        {
+          "doc_id": "D004",
+          "title": "差旅报销材料与办理流程（合成示例）",
+          "version_date": "2026-07-15",
+          "topic": "差旅报销",
+          "snippet": "差旅报销应附出差审批记录、有效发票及费用明细，交通费用还须提供对应行程凭证。"
+        }
+      ],
+      "total": 3,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "insufficient_evidence",
+      "rationale": "多轮检索均未命中购房补贴或住房补贴制度，仅有差旅报销类文档，无可用证据支持金额结论"
+    }
+  },
+  {
+    "step": 5,
+    "event": "final",
+    "origin": "model",
+    "status": "insufficient_evidence",
+    "rationale": "多轮检索均未命中购房补贴或住房补贴制度，仅有差旅报销类文档，无可用证据支持金额结论",
+    "next_action": "end"
+  }
+]

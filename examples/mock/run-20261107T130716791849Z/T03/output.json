@@ -1,0 +1,57 @@
+{
+  "question": "公司的购房补贴可以领取多少钱？",
+  "history": [],
+  "mode": "mock",
+  "model": "offline-flow-simulator",
+  "reported_model": null,
+  "answer": "离线Mock流程已结束；它未调用真实模型，不能提供经过模型判断的业务结论。",
+  "citations": [],
+  "gaps": [
+    "需要使用 live 模式验证模型决策及业务答案"
+  ],
+  "status": "incomplete",
+  "reason": "offline_mock_boundary",
+  "trace": [
+    {
+      "step": 1,
+      "event": "tool_call",
+      "model_turn": 1,
+      "tool": "search_documents",
+      "arguments": {
+        "query": "公司的购房补贴可以领取多少钱？",
+        "reason": "离线模拟：展示检索工具流程"
+      },
+      "rationale": "离线模拟：展示检索工具流程",
+      "observation": {
+        "ok": true,
+        "query": "公司的购房补贴可以领取多少钱？",
+        "matches": [],
+        "total": 0,
+        "truncated": false
+      },
+      "next_action": {
+        "type": "finish",
+        "status": "incomplete",
+        "rationale": "offline_mock_boundary"
+      }
+    },
+    {
+      "step": 2,
+      "event": "final",
+      "origin": "model",
+      "status": "incomplete",
+      "rationale": "offline_mock_boundary",
+      "next_action": "end"
+    }
+  ],
+  "tool_calls": 1,
+  "model_turns": 2,
+  "limits": {
+    "max_tool_calls": 8,
+    "max_model_turns": 12
+  },
+  "usage": {},
+  "started_at": "2026-11-07T13:07:16.815832+00:00",
+  "finished_at": "2026-11-07T13:07:16.816355+00:00",
+  "duration_seconds": 0.001
+}

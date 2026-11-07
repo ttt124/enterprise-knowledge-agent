@@ -1,0 +1,663 @@
+{
+  "mode": "mock",
+  "model": "offline-flow-simulator",
+  "run_directory": "D:\\codex_project\\enterprise-knowledge-agent\\examples\\mock\\run-20261107T130716791849Z",
+  "created_at_utc": "20261107T130716791849Z",
+  "total": 9,
+  "passed": 9,
+  "results": [
+    {
+      "id": "T01",
+      "name": "设备借用期限",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.006,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "completed"
+          ],
+          "citation_doc_ids": [
+            "D001"
+          ],
+          "answer_regex": "7|七"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T02",
+      "name": "差旅报销期限冲突",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.004,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "needs_clarification"
+          ],
+          "citation_doc_ids": [
+            "D002",
+            "D003"
+          ],
+          "answer_regex": "确认|核实|澄清|冲突|不一致"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T03",
+      "name": "资料外问题",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.003,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "insufficient_evidence"
+          ],
+          "no_citations": true
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T04",
+      "name": "设备同义口语检索",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.003,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "completed"
+          ],
+          "citation_doc_ids": [
+            "D001"
+          ],
+          "answer_regex": "7|七|一周"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T05",
+      "name": "历史指代归还流程",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.004,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "completed"
+          ],
+          "citation_doc_ids": [
+            "D001"
+          ],
+          "answer_regex": "管理员|登记"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T06",
+      "name": "读取工具持续失败",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_failure_observed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.003,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "incomplete",
+            "insufficient_evidence"
+          ],
+          "no_citations": true,
+          "tool_failure_observed": true
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T07",
+      "name": "仅一次工具调用预算",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.003,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "incomplete"
+          ],
+          "no_citations": true,
+          "max_tool_calls": 1
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T08",
+      "name": "临时资料改为十天",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.003,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "completed"
+          ],
+          "citation_doc_ids": [
+            "D001"
+          ],
+          "answer_regex": "10|十",
+          "forbidden_answer_regex": "(?<![0-9])7(?![0-9])|七天"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    },
+    {
+      "id": "T09",
+      "name": "新增设备期限冲突",
+      "passed": true,
+      "status": "incomplete",
+      "checks": [
+        {
+          "check": "status",
+          "passed": true,
+          "detail": "actual='incomplete'; allowed=['incomplete']"
+        },
+        {
+          "check": "answer_is_text",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "citations_are_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "no_unsupported_citations",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "trace_is_list",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_calls_is_integer",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_budget_respected",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "tool_count_matches_trace",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "actual_tools_exercised",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "terminal_event_present",
+          "passed": true,
+          "detail": ""
+        }
+      ],
+      "elapsed_seconds": 0.004,
+      "business_expectations": {
+        "status": "not_evaluated",
+        "expected": {
+          "status": [
+            "needs_clarification"
+          ],
+          "citation_doc_ids": [
+            "D001",
+            "D009"
+          ],
+          "answer_regex": "确认|核实|澄清|冲突|不一致"
+        },
+        "reason": "Offline simulator has no business reasoning ability; only flow assertions run."
+      }
+    }
+  ],
+  "scope": "offline_flow",
+  "business_expectations_evaluated": false,
+  "limitation": "Assertion-based checks, not an independent answer-quality judge. Offline flow results do not establish model or business quality."
+}
