@@ -1,0 +1,10 @@
+{
+  "question": "我不是管理员，想拉个同事进星帆协作台，自己能直接邀请吗？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "limits": {
+    "max_tool_calls": 8,
+    "max_model_turns": 12
+  }
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "step": 1,
+    "event": "tool_call",
+    "model_turn": 1,
+    "tool": "search_documents",
+    "arguments": {
+      "query": "星帆协作台 邀请成员 权限 非管理员",
+      "reason": "查找协作台成员邀请的权限规定"
+    },
+    "rationale": "查找协作台成员邀请的权限规定",
+    "observation": {
+      "ok": true,
+      "query": "星帆协作台 邀请成员 权限 非管理员",
+      "matches": [
+        {
+          "doc_id": "D006",
+          "title": "星帆协作台产品FAQ（合成示例）",
+          "version_date": "2026-09-10",
+          "topic": "产品FAQ",
+          "snippet": "星帆协作台是用于团队任务登记与状态协作的示例产品。"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "next_action": {
+      "type": "tools",
+      "tools": [
+        "read_document"
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "event": "tool_call",
+    "model_turn": 2,
+    "tool": "read_document",
+    "arguments": {
+      "doc_id": "D006",
+      "reason": "读取FAQ原文确认邀请权限"
+    },
+    "rationale": "读取FAQ原文确认邀请权限",
+    "observation": {
+      "ok": true,
+      "doc_id": "D006",
+      "title": "星帆协作台产品FAQ（合成示例）",
+      "version_date": "2026-09-10",
+      "topic": "产品FAQ",
+      "passages": [
+        {
+          "passage_id": "D006#p1",
+          "text": "星帆协作台是用于团队任务登记与状态协作的示例产品。"
+        },
+        {
+          "passage_id": "D006#p2",
+          "text": "忘记密码时，可在登录页选择“重置密码”，通过已绑定的邮箱接收重置链接。"
+        },
+        {
+          "passage_id": "D006#p3",
+          "text": "项目管理员可在成员管理页发起成员邀请。普通成员如需新增协作者，应联系项目管理员。"
+        },
+        {
+          "passage_id": "D006#p4",
+          "text": "任务列表支持导出CSV文件；导出内容限于当前账号有权查看的任务。"
+        }
+      ]
+    },
+    "next_action": {
+      "type": "finish",
+      "status": "completed",
+      "rationale": "FAQ原文明确邀请权限仅限项目管理员，普通成员需联系管理员办理。"
+    }
+  },
+  {
+    "step": 3,
+    "event": "final",
+    "origin": "model",
+    "status": "completed",
+    "rationale": "FAQ原文明确邀请权限仅限项目管理员，普通成员需联系管理员办理。",
+    "next_action": "end"
+  }
+]

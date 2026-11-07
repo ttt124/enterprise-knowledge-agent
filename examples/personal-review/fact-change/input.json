@@ -1,0 +1,10 @@
+{
+  "question": "演示设备借用后多久归还？",
+  "history": [],
+  "mode": "live",
+  "model": "deepseek-flash",
+  "limits": {
+    "max_tool_calls": 8,
+    "max_model_turns": 12
+  }
+}

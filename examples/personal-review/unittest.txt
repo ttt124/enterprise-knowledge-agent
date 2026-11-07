@@ -1,0 +1,33 @@
+test_exact_tool_budget_still_allows_model_final_answer (tests.test_agent.AgentTests.test_exact_tool_budget_still_allows_model_final_answer) ... ok
+test_failed_tool_calls_consume_budget (tests.test_agent.AgentTests.test_failed_tool_calls_consume_budget) ... ok
+test_history_is_forwarded_but_does_not_authorize_unread_citation (tests.test_agent.AgentTests.test_history_is_forwarded_but_does_not_authorize_unread_citation) ... ok
+test_model_can_observe_failure_and_stop_without_using_all_budget (tests.test_agent.AgentTests.test_model_can_observe_failure_and_stop_without_using_all_budget) ... ok
+test_model_turn_limit_prevents_tool_free_endless_empty_response (tests.test_agent.AgentTests.test_model_turn_limit_prevents_tool_free_endless_empty_response) ... ok
+test_modified_source_changes_observed_evidence_and_answer (tests.test_agent.AgentTests.test_modified_source_changes_observed_evidence_and_answer) ... ok
+test_one_tool_budget_cannot_complete_from_search_snippets (tests.test_agent.AgentTests.test_one_tool_budget_cannot_complete_from_search_snippets) ... ok
+test_quote_must_be_verbatim_and_point_to_the_read_passage (tests.test_agent.AgentTests.test_quote_must_be_verbatim_and_point_to_the_read_passage) ... ok
+test_search_snippet_cannot_be_cited_without_reading_document (tests.test_agent.AgentTests.test_search_snippet_cannot_be_cited_without_reading_document) ... ok
+test_valid_read_quote_is_accepted_and_trace_has_observations (tests.test_agent.AgentTests.test_valid_read_quote_is_accepted_and_trace_has_observations) ... ok
+test_conflict_advice_patterns_allow_confirmation_and_reject_execution_advice (tests.test_evaluation.EvaluationTests.test_conflict_advice_patterns_allow_confirmation_and_reject_execution_advice) ... ok
+test_expected_number_does_not_mask_missing_actual_number (tests.test_evaluation.EvaluationTests.test_expected_number_does_not_mask_missing_actual_number) ... ok
+test_fabricated_read_quote_still_fails_source_check (tests.test_evaluation.EvaluationTests.test_fabricated_read_quote_still_fails_source_check) ... ok
+test_mock_failure_case_requires_actual_failure_observation (tests.test_evaluation.EvaluationTests.test_mock_failure_case_requires_actual_failure_observation) ... ok
+test_mock_validates_flow_without_grading_business_expectations (tests.test_evaluation.EvaluationTests.test_mock_validates_flow_without_grading_business_expectations) ... ok
+test_mutation_keeps_default_documents_untouched (tests.test_evaluation.EvaluationTests.test_mutation_keeps_default_documents_untouched) ... ok
+test_source_quote_without_read_observation_fails (tests.test_evaluation.EvaluationTests.test_source_quote_without_read_observation_fails) ... ok
+test_valid_current_read_quote_passes (tests.test_evaluation.EvaluationTests.test_valid_current_read_quote_passes) ... ok
+test_http_redirect_is_rejected_without_visiting_target (tests.test_model.ModelTransportTests.test_http_redirect_is_rejected_without_visiting_target) ... ok
+test_settings_repr_omits_api_key_without_loading_environment (tests.test_model.ModelTransportTests.test_settings_repr_omits_api_key_without_loading_environment) ... ok
+test_colloquial_synonyms_recall_device_policy (tests.test_tools.ToolTests.test_colloquial_synonyms_recall_device_policy) ... ok
+test_conflicting_policies_are_both_recalled (tests.test_tools.ToolTests.test_conflicting_policies_are_both_recalled) ... ok
+test_empty_search_is_success_not_tool_failure (tests.test_tools.ToolTests.test_empty_search_is_success_not_tool_failure) ... ok
+test_new_conflicting_device_document_is_recalled (tests.test_tools.ToolTests.test_new_conflicting_device_document_is_recalled) ... ok
+test_read_returns_stable_ids_and_exact_original_paragraphs (tests.test_tools.ToolTests.test_read_returns_stable_ids_and_exact_original_paragraphs) ... ok
+test_source_edit_changes_search_observation (tests.test_tools.ToolTests.test_source_edit_changes_search_observation) ... ok
+test_transient_failure_recovers_and_persistent_failure_does_not (tests.test_tools.ToolTests.test_transient_failure_recovers_and_persistent_failure_does_not) ... ok
+test_unknown_tool_invalid_arguments_and_missing_doc_are_explicit_errors (tests.test_tools.ToolTests.test_unknown_tool_invalid_arguments_and_missing_doc_are_explicit_errors) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.113s
+
+OK
