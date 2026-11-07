@@ -2,6 +2,8 @@
 
 一个面向合成企业制度的小型 Python CLI：真实模型选择检索与原文读取工具，根据工具返回决定继续查证、回答、追问或停止。回答保留文档 ID 和逐字引用，运行过程保留 Trace。资料冲突且没有优先关系时，请求确认适用制度。
 
+私有交付仓库：[ttt124/enterprise-knowledge-agent](https://github.com/ttt124/enterprise-knowledge-agent)。提交题号为3，最终提交 SHA 可用 `git rev-parse HEAD` 获取；指定评审账号的访问权限需要单独配置。
+
 ## 评审入口
 
 - [需求与范围](docs/01-requirements.md) / [方案与取舍](docs/02-solution.md)

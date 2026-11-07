@@ -33,4 +33,4 @@
 
 ## 证据与交付状态
 
-最终结果见[实时报告](../examples/live/run-20261107T131207894281Z/report.md)、[单元测试日志](../examples/tests/unittest-20261107T131159415747Z.txt)及[模拟报告](../examples/mock/run-20261107T130716791849Z/report.md)，详细解释见 `03-evaluation.md`。项目当前保存在本地，尚未上传 GitHub：连接可识别账号，但 CLI 鉴权 401 与浏览器连接超时尚未解决，不将其描述为已发布成果。
+最终结果见[实时报告](../examples/live/run-20261107T131207894281Z/report.md)、[单元测试日志](../examples/tests/unittest-20261107T131159415747Z.txt)及[模拟报告](../examples/mock/run-20261107T130716791849Z/report.md)，详细解释见 `03-evaluation.md`。项目通过私有仓库 [ttt124/enterprise-knowledge-agent](https://github.com/ttt124/enterprise-knowledge-agent)交付，不包含本机密钥或虚拟环境。指定评审账号尚未提供，其访问权限尚未配置；本人实际投入时长与学习确认仍需如实补充。
